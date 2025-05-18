@@ -26,3 +26,29 @@ app.post('/api/tasks', (req, res) => {
 app.listen(PORT, () => {
   console.log(`TaAi API is running on http://localhost:${PORT}/api`);
 });
+// GET /api/ttbs/products
+app.get('/api/ttbs/products', (req, res) => {
+  const products = [
+    {
+      name: "Smart Internet",
+      description: "Secure, high-speed internet with real-time monitoring and auto failover."
+    },
+    {
+      name: "SIP Trunking",
+      description: "Cloud-ready voice service delivered over IP."
+    },
+    {
+      name: "Smartflo",
+      description: "Cloud-based communication suite for remote and hybrid teams."
+    },
+    {
+      name: "SD-WAN",
+      description: "Next-gen network solution for branch connectivity and optimization."
+    },
+    {
+      name: "IoT Solutions",
+      description: "Connected device platform for asset tracking, smart metering, and more."
+    }
+  ];
+  res.json(products);
+});
